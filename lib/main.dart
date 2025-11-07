@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fyptayarman/presentation/screen/home.dart';
+import 'package:fyptayarman/presentation/nav/main_nav_controller.dart';
+// import 'package:fyptayarman/presentation/navigation/main_nav_controller.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(), // Starting screen
+      home: MainNavController(), // 👈 This must be here
     );
   }
 }

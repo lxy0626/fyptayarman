@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:fyptayarman/presentation/widget/Navbar.dart';
+import 'package:fyptayarman/presentation/widget/icon_grid.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: Text(
-          "Home Screen",
-          style: TextStyle(fontSize: 22),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Home Screen",
+              style: TextStyle(fontSize: 22),
+            ),
+            SizedBox(height: 24),
+            IconGridWidget(),
+          ],
         ),
       ),
-      bottomNavigationBar: const BottomNavWidget(),
     );
   }
 }

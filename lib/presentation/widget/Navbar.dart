@@ -1,13 +1,28 @@
 import 'package:flutter/material.dart';
 
 class BottomNavWidget extends StatelessWidget {
-  const BottomNavWidget({super.key});
+  final int currentIndex;
+  final Function(int) onTap;
+
+  const BottomNavWidget({
+    super.key,
+    required this.currentIndex,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final icons = [
+      "assets/ic_round-home.png",
+      "assets/fa7-solid_car-side.png",
+      "assets/icon-park-solid_transaction.png",
+      "assets/iconamoon_profile-fill.png",
+    ];
+
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 10),
-      decoration: BoxDecoration(
+      height: 70,
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(
@@ -17,13 +32,18 @@ class BottomNavWidget extends StatelessWidget {
         ],
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: const [
-          Icon(Icons.home, size: 30, color: Colors.grey),
-          Icon(Icons.search, size: 30, color: Colors.grey),
-          Icon(Icons.favorite, size: 30, color: Colors.grey),
-          Icon(Icons.person, size: 30, color: Colors.grey),
-        ],
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: List.generate(icons.length, (index) {
+          final isSelected = index == currentIndex;
+          return GestureDetector(
+            onTap: () => onTap(index),
+            child: Image.asset(
+              icons[index],
+              width: 28,
+              color: isSelected ? Color(0xFF0D2BEF) : Colors.black,
+            ),
+          );
+        }),
       ),
     );
   }
