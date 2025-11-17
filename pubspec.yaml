@@ -70,6 +70,12 @@ flutter:
     - assets/roentgen_tyre.png
     - assets/bg.png
     - assets/vios.png
+    - assets/basil_camera-solid.png
+    - assets/mingcute_lock-fill.png
+    - assets/tabler_password.png
+    - assets/tabler_fingerprint.png
+    - assets/solar_card-bold.png
+    - assets/ic_baseline-email.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
