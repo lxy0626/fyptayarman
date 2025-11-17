@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fyptayarman/presentation/screen/home.dart';
+import 'package:fyptayarman/presentation/screen/profile.dart';
+import 'package:fyptayarman/presentation/screen/transactions.dart';
 import 'package:fyptayarman/presentation/screen/vehicles.dart';
 import 'package:fyptayarman/presentation/widget/Navbar.dart';
 // import 'home_screen.dart';
@@ -19,8 +21,8 @@ class _MainNavControllerState extends State<MainNavController> {
   final List<Widget> _screens = const [
     HomeScreen(),
     VehicleListScreen(),
-    // ServicesScreen(),
-    // ProfileScreen(),
+    TransactionScreen(),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {

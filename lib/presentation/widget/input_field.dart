@@ -20,9 +20,9 @@ class InputField extends StatelessWidget {
         Text(
           title,
           style: const TextStyle(
-            fontSize: 16,
+            fontSize: 12,
             fontWeight: FontWeight.w600,
-            color: Colors.black87,
+            color: Color(0xFF666666),
           ),
         ),
         const SizedBox(height: 8), // spacing between title and field

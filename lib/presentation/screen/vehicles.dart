@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fyptayarman/presentation/screen/add_vehicle.dart';
 import 'package:fyptayarman/presentation/screen/scaffold.dart';
 import 'package:fyptayarman/presentation/widget/action_button.dart';
 import 'package:fyptayarman/presentation/widget/vehicle_card.dart';
@@ -43,7 +44,14 @@ class VehicleListScreen extends StatelessWidget {
             // ),
             BottomButton(
               text: "Add Vehicle",
-              onTap: () => print("Add Vehicle tapped"), // your function
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AddVehicleScreen(),
+                  ),
+                );
+              }, // your function
             ),
           ],
         ),
