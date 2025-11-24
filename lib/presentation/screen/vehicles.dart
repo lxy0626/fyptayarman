@@ -34,14 +34,6 @@ class VehicleListScreen extends StatelessWidget {
                 ),
               ),
             ),
-            // Floating bottom button
-            // Align(
-            //   alignment: Alignment.bottomCenter,
-            //   child: BottomButton(
-            //     text: "Add Vehicle",
-            //     onTap: () => print("Add Vehicle tapped"),
-            //   ),
-            // ),
             BottomButton(
               text: "Add Vehicle",
               onTap: () {
